@@ -17,8 +17,8 @@ public class CAPEController {
 		AccountDetails acctInq = new AccountDetails(acctId);
 		return acctInq;
 	}
-	
-	@GetMapping(value = "/mediatedapicape/v1.0/account/{acctId}/histinq", produces = "application/json;charset=UTF-8")
+
+	@PostMapping(value = "/mediatedapicape/v1.0/account/{acctId}/histinq", produces = "application/json;charset=UTF-8")
 	public TranHist getTransactions(@PathVariable long acctId) {
 		TranHist tranHist = new TranHist(acctId);
 		return tranHist;

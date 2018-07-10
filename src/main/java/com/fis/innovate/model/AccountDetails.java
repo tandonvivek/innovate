@@ -3,7 +3,7 @@ package com.fis.innovate.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AccountDetails {
-	
+
 	@JsonProperty("DpAcctInqRsp")
 	private DpAcctInqRsp acctInqRsp;
 

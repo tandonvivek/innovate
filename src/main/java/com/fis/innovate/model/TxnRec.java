@@ -18,14 +18,15 @@ public class TxnRec {
 	private String origChnlId;
 	@JsonProperty("PstDte")
 	private String pstDte;
-		
-	public TxnRec(String txnRefNbr,Double amt,String crncyCde,String pstDfltNarr,String pmtTyp,String origChnlId,String pstDte) {
-		this.txnRefNbr=txnRefNbr;
-		this.amt=amt;
-		this.crncyCde=crncyCde;
-		this.pstDfltNarr=pstDfltNarr;
-		this.pmtTyp=pmtTyp;
-		this.origChnlId=origChnlId;
-		this.pstDte=pstDte;
+
+	public TxnRec(String txnRefNbr, Double amt, String crncyCde, String pstDfltNarr, String pmtTyp, String origChnlId,
+			String pstDte) {
+		this.txnRefNbr = txnRefNbr;
+		this.amt = amt;
+		this.crncyCde = crncyCde;
+		this.pstDfltNarr = pstDfltNarr;
+		this.pmtTyp = pmtTyp;
+		this.origChnlId = origChnlId;
+		this.pstDte = pstDte;
 	}
 }

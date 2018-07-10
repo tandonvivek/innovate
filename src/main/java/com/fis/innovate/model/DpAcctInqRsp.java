@@ -26,7 +26,7 @@ public class DpAcctInqRsp {
 	private Double lstDpAmt;
 	@JsonProperty("LstWthdrwlAmt")
 	private Double lstWthdrwlAmt;
-	
+
 	public DpAcctInqRsp() {
 
 	}
@@ -34,14 +34,14 @@ public class DpAcctInqRsp {
 	public DpAcctInqRsp(long acctId) {
 		this.rspHdr = new RspHdr("Success");
 		this.acctId = acctId;
-		this.acctTyp="Checking";
-		this.crncyCde="USD";
-		this.prmyStat="Active";
-		this.scndyStat="Open";
-		this.openDte=null;
-		this.lgrBal=15743.53;
-		this.availBal=15743.53;
-		this.lstDpAmt=51.00;
-		this.lstWthdrwlAmt=5.00;
+		this.acctTyp = "Checking";
+		this.crncyCde = "USD";
+		this.prmyStat = "Active";
+		this.scndyStat = "Open";
+		this.openDte = null;
+		this.lgrBal = 15743.53;
+		this.availBal = 15743.53;
+		this.lstDpAmt = 51.00;
+		this.lstWthdrwlAmt = 5.00;
 	}
 }
