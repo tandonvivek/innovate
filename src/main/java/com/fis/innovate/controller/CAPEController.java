@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fis.innovate.model.AccountDetails;
 import com.fis.innovate.model.DpFundTrsfrRspEnv;
+import com.fis.innovate.model.TranHist;
 
 @RestController
 public class CAPEController {
@@ -15,6 +16,12 @@ public class CAPEController {
 	public AccountDetails getStatus(@PathVariable long acctId) {
 		AccountDetails acctInq = new AccountDetails(acctId);
 		return acctInq;
+	}
+	
+	@GetMapping(value = "/mediatedapicape/v1.0/account/{acctId}/histinq", produces = "application/json;charset=UTF-8")
+	public TranHist getTransactions(@PathVariable long acctId) {
+		TranHist tranHist = new TranHist(acctId);
+		return tranHist;
 	}
 
 	@PostMapping(value = "/mediatedapicape/v1.0/account/{accountId}/transferfunds", produces = "application/json;charset=UTF-8")
