@@ -2,9 +2,11 @@ package com.fis.innovate.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fis.innovate.model.AccountDetails;
+import com.fis.innovate.model.DpFundTrsfrRspEnv;
 
 @RestController
 public class CAPEController {
@@ -13,5 +15,11 @@ public class CAPEController {
 	public AccountDetails getStatus(@PathVariable long acctId) {
 		AccountDetails acctInq = new AccountDetails(acctId);
 		return acctInq;
+	}
+
+	@PostMapping(value = "/mediatedapicape/v1.0/account/{accountId}/transferfunds", produces = "application/json;charset=UTF-8")
+	public DpFundTrsfrRspEnv doFundTrans(@PathVariable String accountId) {
+		DpFundTrsfrRspEnv fundTrans = new DpFundTrsfrRspEnv();
+		return fundTrans;
 	}
 }

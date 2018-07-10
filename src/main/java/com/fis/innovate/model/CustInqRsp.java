@@ -36,6 +36,6 @@ public class CustInqRsp {
 		this.gndr = "Male";
 		this.tin = new TIN();
 		this.custSnc = "2018-01-27";
-		
+
 	}
 }

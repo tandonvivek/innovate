@@ -19,13 +19,13 @@ public class HeartbeatController {
 		}
 		return hb;
 	}
-	
+
 	@GetMapping(value = "/heartbeat/{id}/checkstatus", produces = "application/json;charset=UTF-8")
 	public Heartbeat getStatus(@PathVariable String id) {
 		Heartbeat hb = new Heartbeat(id);
 		return hb;
 	}
-	
+
 	@GetMapping(value = "/heartbeat/{id}/logout", produces = "application/json;charset=UTF-8")
 	public Heartbeat logout(@PathVariable String id) {
 		Heartbeat hb = new Heartbeat(id);
